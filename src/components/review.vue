@@ -1,51 +1,81 @@
 <template>
-  <div class="review">
-    <img class="rev-face" src="rev-face.jpg" alt="" />
-    <p>
-      החוויה שלי במרפאת השיניים של המומחים, שינתה אצלי את חווית הטיפול במרפאת
-      שיניים אחרי לא מעט טיפולים ורופאים שהכרתי הגעתי למרפאה דרך האתר, פגשתי
-      צוות מקצועי, קשוב וסבלני, שחווית המטופל חשובה לו לא פחות מהטיפול המקצועי
-      והשימוש בשיטות חדשניות. ללא נדיפות, ללא ביקורת, רק ענייניות.
-    </p>
+  <div class="review-container">
+    <img class="review-bcg-img" src="trucklogo.png" alt="as">
+
+
     <div class="stars-container">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
+      <img src="star.png" alt="ads" />
+      <img src="star.png" alt="ads" />
+      <img src="star.png" alt="ads" />
+      <img src="star.png" alt="ads" />
+      <img src="star.png" alt="ads" />
     </div>
 
+    <p class="rev-txt">"{{ reviewData.txt }}"</p>
 
+
+    <span class="review-author"> {{ reviewData.author }}</span>
   </div>
 </template>
 
 <script>
 export default {
   name: "review",
+  props: {
+    reviewData: Object,
+  },
 };
 </script>
 
 <style scoped>
-.review {
-  padding: 10px 0;
-  text-align: center;
-  background: #ffe4cc;
+.review-container {
+  position: relative;
+  background: rgba(12, 47, 226, 0.089);
+  border-radius: 10px;
+  margin: 1rem auto;
+  width: 96%;
+  padding: 0.1rem 0.35rem 1.15rem ;
+    margin-bottom: 24px;
+
+}
+.review-bcg-img{
+  position: absolute;
+  right: 2px;
+  top: 10px;
+  height: 131px;
+  width: 136px;
+  object-fit: contain;
+  opacity: 0.12;
 }
 .rev-face {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 55px;
+  height: 53.6px;
+  border-radius: 16px;
+  margin-bottom: 24px;
 }
-.review p {
-  width: 285px;
-  margin: 0 auto;
+.review-container p {
+  /* width: 285px; */
+  margin: 0 auto 1.7rem;
   padding: 0 20px;
-  font-size: 10px;
-  line-height: 12px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
   text-align: center;
   color: #5b5858;
+  max-width: 40ch;
 }
-.stars-container{
-    margin: 13px 0px 0px;
+.stars-container {
+  margin: 0.9rem 0px 0.95rem ;
 }
+.stars-container>*{
+  width: 18px;
+  height: 18px;
+  margin: 0px 0.22rem;
+}
+.review-author{
+font-size: 12px;
+line-height: 16px;
+text-align: center;
+color: #5B5858;}
 </style>

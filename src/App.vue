@@ -1,58 +1,51 @@
 <template>
   <div id="app">
-    <headNav></headNav>
-    <middle-bar></middle-bar>
-
-    <review></review>
-    <contact-container></contact-container>
-    <footer>
-      <p>
-        הפרטים באתר לא נשמרים לצד ג' מלבד לנבחרת הרופאים המומלצים של 2020 כפי
-        שדורגו בחודשים ינואר-יוני 2020
-      </p>
-      <P>
-        אתר זה נבנה ע"י מערכת בניית האתרים של שירות sitesrus.co.il פיתוח עמודי
-        נחיתה
-      </P>
-      <p>
-        כל הזכויות שמורות
-      </p>
-    </footer>
+    <head-nav>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  </head-nav>
+  <middle-bar>
+  </middle-bar>
+  <stimot></stimot>
+  <tziloom></tziloom>
+    <hitooh></hitooh>
+    <henion></henion>
+   <reviews-section>
+  </reviews-section>
   </div>
 </template>
 
 <script>
-import headNav from "./components/head-nav";
-import middleBar from "./components/middle-bar";
-import review from "./components/review";
-import contactContainer from "./components/contact-container";
+import headNav from './components/head-nav'
+import middleBar from './components/middle-bar'
+import middleBar2 from './components/middle-bar2'
+import reviewsSection from './components/reviews-section'
+import stimot from './components/stimot'
+import tziloom from './components/tziloom'
+import hitooh from './components/hitooh'
+import henion from './components/henion'
 
 export default {
-  name: "App",
+  name: 'app',
   components: {
     headNav,
     middleBar,
-    review,
-    contactContainer,
-  },
-};
+    middleBar2,
+    reviewsSection,
+    stimot,
+    tziloom,
+    hitooh,
+    henion
+  }
+}
 </script>
 
 <style>
 #app {
-}
-footer {
-  padding: 15px 0;
-  width: 100%;
-  background: #c4c4c4;
-}
-footer p {
-  width: 275px;
-  margin: 0 auto;
-  font-size: 11px;
-  line-height: 14px;
-  text-align: right;
-  color: #a3a1a1;
-  margin-bottom: 20px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
